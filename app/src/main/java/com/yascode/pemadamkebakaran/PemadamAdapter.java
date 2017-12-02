@@ -5,20 +5,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.List;
+
 /**
  * Created by caksono21 on 02/12/17.
  */
 
 public class PemadamAdapter extends RecyclerView.Adapter<PemadamViewHolder> {
 
-    Data[] Datas;
+    List<Data> Datas;
     ClickHandler clickHandler;
 
     interface ClickHandler {
         void onClick(Data data);
     }
 
-    public PemadamAdapter(Data[] datas, ClickHandler clickHandler) {
+    public PemadamAdapter(List<Data> datas, ClickHandler clickHandler) {
         Datas = datas;
         this.clickHandler = clickHandler;
     }
@@ -34,7 +36,7 @@ public class PemadamAdapter extends RecyclerView.Adapter<PemadamViewHolder> {
 
     @Override
     public void onBindViewHolder(PemadamViewHolder holder, int position) {
-        Data data = Datas[position];
+        Data data = Datas.get(position);
 
         bind(holder, data);
     }
@@ -53,6 +55,6 @@ public class PemadamAdapter extends RecyclerView.Adapter<PemadamViewHolder> {
 
     @Override
     public int getItemCount() {
-        return Datas.length;
+        return Datas.size();
     }
 }

@@ -10,6 +10,7 @@ public class Data {
     String ALAMAT;
     String RT_RW;
     String KELURAHAN;
+
     double LAT;
     double LNG;
 

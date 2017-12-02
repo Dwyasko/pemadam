@@ -26,11 +26,24 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
+    //library google map
+    compile 'com.google.android.gms:play-services-maps:11.6.0'
+
+    //library recyclerview - untuk menampilkan list
     compile 'com.android.support:recyclerview-v7:26.1.0'
 
+    //library retrofit
     compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    //library parsing json
+
+    //library parser json
     compile 'com.google.code.gson:gson:2.8.1'
-    //library automated parsing json
+
+    //library automated parser json untuk retrofit
     compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+
+    //library logging http connection
+    compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
+
+    //library image loader
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

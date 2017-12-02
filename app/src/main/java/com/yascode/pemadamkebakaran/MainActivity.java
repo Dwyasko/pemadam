@@ -1,14 +1,18 @@
 package com.yascode.pemadamkebakaran;
 
+import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-//import retrofit2.Call;
+import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -35,17 +39,25 @@ public class MainActivity extends AppCompatActivity implements PemadamAdapter.Cl
 
     private void loadData() {
         apiInterface = RestAPI.getApiInterface();
-        Call<Pemadam> pemadam = apiInterface.getPemadam();
+
+        final Call<Pemadam> pemadam = apiInterface.getPemadam(
+                getResources().getString(R.string.token)
+        );
+
+
         pemadam.enqueue(new Callback<Pemadam>() {
             @Override
-            public void onResponse(Call<Pemadam> call, Response<Pemadam> response) {
+            public void onResponse(@NonNull Call<Pemadam> call, Response<Pemadam> response) {
                 Pemadam responsePemadam = response.body();
+                Log.d("status", responsePemadam.getStatus());
                 setRecyclerView(responsePemadam);
             }
 
             @Override
             public void onFailure(Call<Pemadam> call, Throwable t) {
-                Toast.makeText(MainActivity.this, "Gagal cuy", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, t.getMessage()
+                        , Toast.LENGTH_SHORT).show();
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
@@ -55,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements PemadamAdapter.Cl
         recMain.setVisibility(View.VISIBLE);
         recMain.setLayoutManager(new LinearLayoutManager(this));
 
-        Data[] data = responsePemadam.data;
+        List<Data> data = responsePemadam.data;
 
         adapter = new PemadamAdapter(data, this);
         recMain.setAdapter(adapter);
@@ -63,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements PemadamAdapter.Cl
 
     @Override
     public void onClick(Data data) {
-
+        Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+        startActivity(intent);
     }
 }

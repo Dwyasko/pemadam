@@ -2,6 +2,7 @@ package com.yascode.pemadamkebakaran;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -11,6 +12,6 @@ import retrofit2.http.Path;
 
 public interface ApiInterface {
 
-    @GET("/emergency/pospemadam")
-    Call<Pemadam> getPemadam();
+    @GET("v1/emergency/pospemadam/")
+    Call<Pemadam> getPemadam(@Header("Authorization") String token);
 }

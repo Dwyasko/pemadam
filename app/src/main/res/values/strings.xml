@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PemadamKebakaran</string>
+
+    <!--TODO : menambahkan token untuk API dari http://jakarta.go.id/v1/api-->
+    <string name="token">gdkxw5tQqgf9YAVv2sS5DqnCQNOCpEC/zrXv5iS6TST0j+86AiCYePXQWj4yTJ1a</string>
+
+    <!--TODO : menambahkan api key untuk google maps-->
+    <string name="api_key">AIzaSyDTFJRLGQLYy-Hz9O21lC2tK4JErgLGJBQ</string>
 </resources>
