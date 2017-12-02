@@ -7,5 +7,6 @@ package com.yascode.pemadamkebakaran;
 public class Pemadam {
     String status;
     int count;
+
     Data[] data;
 }
