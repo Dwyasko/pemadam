@@ -28,6 +28,7 @@ dependencies {
 
     //library google map
     compile 'com.google.android.gms:play-services-maps:11.6.0'
+    compile 'com.google.android.gms:play-services-location:11.6.0'
 
     //library recyclerview - untuk menampilkan list
     compile 'com.android.support:recyclerview-v7:26.1.0'

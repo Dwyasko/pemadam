@@ -8,6 +8,11 @@ public class Constants {
 
     public static final String LNG = "LNG";
     public static final String LAT = "LAT";
-    public static final String NOMOR = "NOMOR";
-    public static final String DATAS = "DATAS";
+    public static final String NAMA = "NAMA";
+    public static final String ALAMAT = "ALAMAT";
+    public static final String KELURAHAN = "KELURAHAN";
+    public static final String RTRW = "RTRW";
+
+    //NOMOR UNIK UNTUK REQUEST GOOGLE PLAY SERVICE DIALOG REQUEST
+    public final static int PLAY_SERVICES_RESOLUTION_REQUEST = 9000;
 }

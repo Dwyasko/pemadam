@@ -11,6 +11,8 @@ public class Data {
     String RT_RW;
     String KELURAHAN;
 
+//    String URL_IMAGE;
+
     double LAT;
     double LNG;
 

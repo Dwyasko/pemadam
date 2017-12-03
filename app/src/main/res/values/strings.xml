@@ -6,4 +6,9 @@
 
     <!--TODO : menambahkan api key untuk google maps-->
     <string name="api_key">AIzaSyDTFJRLGQLYy-Hz9O21lC2tK4JErgLGJBQ</string>
+
+    <string name="nama_pos">Pos : </string>
+    <string name="alamat_pos">Alamat : </string>
+    <string name="kelurahan_pos">Kelurahan : </string>
+    <string name="rtrw_pos">RT/RW : </string>
 </resources>

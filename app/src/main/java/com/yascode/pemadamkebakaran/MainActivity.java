@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements PemadamAdapter.Cl
 
         List<Data> data = responsePemadam.data;
 
-        adapter = new PemadamAdapter(data, this);
+        adapter = new PemadamAdapter(data, this, this);
         recMain.setAdapter(adapter);
     }
 
@@ -77,13 +77,13 @@ public class MainActivity extends AppCompatActivity implements PemadamAdapter.Cl
     public void onClick(Data data) {
         Intent intent = new Intent(MainActivity.this, DetailActivity.class);
 
-        String[] datas = new String[]{data.getALAMAT(), data.getPOS_PEMADAM(),
-                data.getKELURAHAN(), data.getRT_RW()};
-
+        //membuat objek bundle untuk menampung data-data yang akan kita kirim kepada @DetailActivity.class
         Bundle bundle = new Bundle();
 
-        bundle.putStringArray("datas", datas);
-        bundle.putInt(Constants.NOMOR, data.getNO());
+        bundle.putString(Constants.NAMA, data.getPOS_PEMADAM());
+        bundle.putString(Constants.ALAMAT, data.getALAMAT());
+        bundle.putString(Constants.KELURAHAN, data.getKELURAHAN());
+        bundle.putString(Constants.RTRW, data.getRT_RW());
         bundle.putDouble(Constants.LAT, data.getLAT());
         bundle.putDouble(Constants.LNG, data.getLNG());
 
