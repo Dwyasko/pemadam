@@ -17,7 +17,6 @@ public class PemadamAdapter extends RecyclerView.Adapter<PemadamViewHolder> {
     ClickHandler clickHandler;
 
     interface ClickHandler {
-        void onClick(Data data);
     }
 
     public PemadamAdapter(List<Data> datas, ClickHandler clickHandler) {
