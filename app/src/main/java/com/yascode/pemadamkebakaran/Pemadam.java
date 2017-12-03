@@ -8,7 +8,7 @@ import java.util.List;
  * Created by caksono21 on 02/12/17.
  */
 
-public class Pemadam {
+public class Pemadam  {
     String status;
     int count;
 

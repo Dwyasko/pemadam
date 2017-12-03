@@ -33,13 +33,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txt_alamat" />
 
-    <fragment xmlns:tools="http://schemas.android.com/tools"
+    <fragment
         android:id="@+id/mapFragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_direction"
-        tools:context="cpn.co.id.maos.MenuActivity" />
+        android:layout_height="300dp"
+        android:layout_above="@+id/btn_direction" />
 
     <Button
         android:id="@+id/btn_direction"

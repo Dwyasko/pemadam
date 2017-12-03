@@ -81,11 +81,11 @@ public class MainActivity extends AppCompatActivity implements PemadamAdapter.Cl
                 data.getKELURAHAN(), data.getRT_RW()};
 
         Bundle bundle = new Bundle();
-        
+
         bundle.putStringArray("datas", datas);
-        bundle.putInt("nomor", data.getNO());
-        bundle.putDouble("LAT", data.getLAT());
-        bundle.putDouble("LONG", data.getLNG());
+        bundle.putInt(Constants.NOMOR, data.getNO());
+        bundle.putDouble(Constants.LAT, data.getLAT());
+        bundle.putDouble(Constants.LNG, data.getLNG());
 
         intent.putExtras(bundle);
 
